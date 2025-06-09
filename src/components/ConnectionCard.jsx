@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 function ConnectionCard({ connection }) {
     return (
         <>
@@ -9,6 +11,7 @@ function ConnectionCard({ connection }) {
                 </div>
                 {connection.age && connection.gender && <p className="list-col-wrap text-xs">{connection.age + ", " + connection.gender}</p>}
                 <button className={connection.status === "accepted" ? "btn btn-outline btn-success" : "btn btn-outline btn-error"}>{connection.status === "accepted" ? "Accepted" : "Rejected"}</button>
+                <Link to={`/chat/${connection._id}`}><button className="btn btn-outline btn-info">Chat</button></Link>
             </li >
         </>
     )
