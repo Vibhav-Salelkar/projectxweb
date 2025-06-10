@@ -53,7 +53,9 @@ Web Sockets and socket.io:
     - broadcast it back to all users in the room using receive message event
 
 More on Web Sockets:
-
+- create useEffect to fetch chat messages from the server when the component mounts
+- configure io connection based on environment
+- default io works on socket.io path, so no need to pass path in production
 
 
 
